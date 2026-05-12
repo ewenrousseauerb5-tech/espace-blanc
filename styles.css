@@ -63,6 +63,92 @@ button:hover,
   transform: translateY(-1px);
 }
 
+@keyframes heroFloat {
+  0%,
+  100% {
+    transform: translateY(-42%) translateX(0);
+  }
+
+  50% {
+    transform: translateY(-45%) translateX(-8px);
+  }
+}
+
+@keyframes softDrift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-10px, 12px, 0);
+  }
+}
+
+@keyframes lineSweep {
+  0% {
+    opacity: 0.18;
+    transform: scaleX(0.82);
+  }
+
+  50% {
+    opacity: 0.42;
+    transform: scaleX(1);
+  }
+
+  100% {
+    opacity: 0.18;
+    transform: scaleX(0.82);
+  }
+}
+
+@keyframes panelIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes photoBreath {
+  0%,
+  100% {
+    background-position: center 50%;
+  }
+
+  50% {
+    background-position: center 54%;
+  }
+}
+
+.section-heading,
+.prototype-tabs,
+.prototype-frame,
+.single-price-card,
+.budget-note,
+.quote-timeline div {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.section-heading.is-visible,
+.prototype-tabs.is-visible,
+.prototype-frame.is-visible,
+.single-price-card.is-visible,
+.budget-note.is-visible,
+.quote-timeline div.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .hero {
   background:
     radial-gradient(circle at 91% 12%, rgba(30, 64, 101, 0.34), transparent 28%),
@@ -124,6 +210,7 @@ button:hover,
 }
 
 .hero-visual {
+  animation: heroFloat 9s ease-in-out infinite;
   height: min(48vh, 520px);
   pointer-events: none;
   position: absolute;
@@ -150,6 +237,8 @@ button:hover,
 }
 
 .visual-line {
+  animation: lineSweep 4.8s ease-in-out infinite;
+  transform-origin: right center;
   background: rgba(30, 64, 101, 0.22);
   display: block;
   height: 1px;
@@ -167,6 +256,7 @@ button:hover,
 }
 
 .visual-card {
+  animation: softDrift 8s ease-in-out infinite;
   background: rgba(255, 255, 255, 0.62);
   border: 1px solid rgba(255, 255, 255, 0.7);
   box-shadow: 0 20px 48px rgba(19, 43, 73, 0.12);
@@ -182,6 +272,7 @@ button:hover,
 }
 
 .card-b {
+  animation-delay: -3s;
   bottom: 18%;
   height: 24%;
   right: 38%;
@@ -324,6 +415,11 @@ h3 {
   color: white;
 }
 
+.tab-button:focus-visible {
+  outline: 2px solid rgba(19, 43, 73, 0.26);
+  outline-offset: 3px;
+}
+
 .prototype-frame {
   background: var(--white);
   border: 1px solid var(--line);
@@ -336,6 +432,7 @@ h3 {
 }
 
 .prototype-frame.active {
+  animation: panelIn 560ms ease both;
   display: block;
 }
 
@@ -424,8 +521,9 @@ h3 {
 }
 
 .mock-visual-hero {
+  animation: photoBreath 18s ease-in-out infinite;
   background:
-    linear-gradient(180deg, rgba(15, 28, 40, 0.72) 0%, rgba(28, 48, 64, 0.52) 45%, rgba(10, 20, 30, 0.22) 72%, rgba(255, 255, 255, 0.86) 100%),
+    linear-gradient(180deg, rgba(10, 20, 32, 0.86) 0%, rgba(14, 30, 46, 0.72) 44%, rgba(10, 20, 30, 0.5) 72%, rgba(255, 255, 255, 0.86) 100%),
     url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=90");
   background-position: center;
   background-size: cover;
@@ -458,7 +556,7 @@ h3 {
 }
 
 .mock-visual-hero p:not(.eyebrow) {
-  color: rgba(255, 255, 255, 0.84);
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
   margin-left: auto;
   margin-right: auto;
@@ -509,6 +607,22 @@ h3 {
   border-radius: 4px;
   color: var(--eb-deep);
   padding: 18px 16px;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.service-strip span:hover,
+.dashboard-grid article:hover,
+.document-panel:hover,
+.decision-panel:hover,
+.admin-stats article:hover,
+.single-price-card:hover,
+.quote-timeline div:hover {
+  border-color: rgba(84, 111, 134, 0.34);
+  box-shadow: 0 18px 42px rgba(19, 43, 73, 0.1);
+  transform: translateY(-3px);
 }
 
 .service-strip strong {
@@ -610,6 +724,7 @@ h3 {
 
 .progress-line .current {
   background: #8d8d8d;
+  box-shadow: 0 0 0 6px rgba(141, 141, 141, 0.12);
 }
 
 .progress-labels {
@@ -628,6 +743,10 @@ h3 {
 
 .dashboard-grid article {
   padding: 22px;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
 .dashboard-grid p {
@@ -659,6 +778,10 @@ h3 {
 .document-panel,
 .decision-panel {
   padding: 22px;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
 .panel-title {
@@ -734,6 +857,10 @@ h3 {
 
 .admin-stats article {
   padding: 20px;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
 .admin-stats span {
@@ -812,6 +939,10 @@ mark.blue {
   min-height: 260px;
   padding: 34px;
   position: relative;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
 .single-price-card p:not(.price) {
@@ -881,6 +1012,10 @@ mark.blue {
   padding: 34px 18px 20px;
   position: relative;
   text-align: center;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
 .quote-timeline span {
@@ -1026,5 +1161,26 @@ mark.blue {
 
   .progress-labels {
     font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .section-heading,
+  .prototype-tabs,
+  .prototype-frame,
+  .single-price-card,
+  .budget-note,
+  .quote-timeline div {
+    opacity: 1;
+    transform: none;
   }
 }
