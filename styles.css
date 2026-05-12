@@ -216,15 +216,6 @@ button:hover,
   text-align: left;
 }
 
-.client-name {
-  color: var(--navy);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(28px, 4vw, 48px);
-  font-weight: 500;
-  line-height: 1;
-  margin-bottom: 18px;
-}
-
 .hero-visual {
   animation: heroFloat 9s ease-in-out infinite;
   height: min(48vh, 520px);
