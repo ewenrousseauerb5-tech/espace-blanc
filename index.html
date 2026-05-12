@@ -236,55 +236,120 @@
       <section id="budget" class="section budget-section">
         <div class="section-heading compact">
           <p class="eyebrow">Budget estimatif</p>
-          <h2>Une première version claire et présentable.</h2>
+          <h2>Une proposition claire, cadrée et évolutive.</h2>
         </div>
-        <article class="single-price-card">
-          <span class="tag">Proposition</span>
-          <h3>Prototype & cadrage digital</h3>
-          <p class="price">1 500 €</p>
-          <p>
-            Création d'une proposition visuelle professionnelle, prototypage des
-            écrans clés, définition du périmètre fonctionnel et préparation
-            d'une base claire pour lancer le projet.
-          </p>
-        </article>
+        <div class="budget-grid">
+          <article class="single-price-card">
+            <span class="tag">Lancement</span>
+            <h3>Création de la plateforme</h3>
+            <p class="price">1 500 €</p>
+            <p>
+              Conception d'une première version professionnelle intégrant la
+              vitrine, l'espace client et l'interface d'administration.
+            </p>
+          </article>
+          <article class="maintenance-card">
+            <span class="tag light">Suivi mensuel</span>
+            <h3>Maintenance & accompagnement</h3>
+            <p class="monthly-price">150 €<small>/mois</small></p>
+            <p>
+              Mises à jour, petites évolutions, support technique et
+              vérification régulière du bon fonctionnement.
+            </p>
+          </article>
+        </div>
+        <div class="budget-breakdown">
+          <div>
+            <span>01</span>
+            <strong>Direction artistique & maquettes</strong>
+            <small>Homepage, espace client et interface admin</small>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>Développement front-end</strong>
+            <small>Pages responsives, animations et expérience premium</small>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Espace client privé</strong>
+            <small>Statuts, documents, notes et suivi de dossier</small>
+          </div>
+          <div>
+            <span>04</span>
+            <strong>Interface de gestion</strong>
+            <small>Ajout de documents, suivi des clients et pilotage interne</small>
+          </div>
+        </div>
         <p class="budget-note">
-          Montant indicatif hors TVA, à ajuster si le périmètre évolue après
-          validation fonctionnelle.
+          Montants indicatifs hors TVA. Le budget final sera confirmé après
+          validation du périmètre fonctionnel et des contenus à intégrer.
         </p>
       </section>
 
       <section class="section timeline-section">
         <div class="section-heading compact">
           <p class="eyebrow">Planning estimatif</p>
-          <h2>Un déroulé simple sur 8 semaines.</h2>
+          <h2>Un déroulé interactif sur 8 semaines.</h2>
         </div>
-        <div class="quote-timeline" aria-label="Planning estimatif">
-          <div>
-            <span>01</span>
-            <strong>Cadrage</strong>
-            <small>Semaine 1</small>
+        <div class="timeline-shell">
+          <div class="quote-timeline" aria-label="Planning estimatif">
+            <button class="timeline-step active" type="button" data-week="1">
+              <span>01</span>
+              <strong>Cadrage</strong>
+              <small>Semaine 1</small>
+            </button>
+            <button class="timeline-step" type="button" data-week="2">
+              <span>02</span>
+              <strong>UX & contenus</strong>
+              <small>Semaine 2</small>
+            </button>
+            <button class="timeline-step" type="button" data-week="3">
+              <span>03</span>
+              <strong>Direction visuelle</strong>
+              <small>Semaine 3</small>
+            </button>
+            <button class="timeline-step" type="button" data-week="4">
+              <span>04</span>
+              <strong>Prototype</strong>
+              <small>Semaine 4</small>
+            </button>
+            <button class="timeline-step" type="button" data-week="5">
+              <span>05</span>
+              <strong>Développement</strong>
+              <small>Semaine 5</small>
+            </button>
+            <button class="timeline-step" type="button" data-week="6">
+              <span>06</span>
+              <strong>Espace privé</strong>
+              <small>Semaine 6</small>
+            </button>
+            <button class="timeline-step" type="button" data-week="7">
+              <span>07</span>
+              <strong>Tests & retours</strong>
+              <small>Semaine 7</small>
+            </button>
+            <button class="timeline-step" type="button" data-week="8">
+              <span>08</span>
+              <strong>Mise en ligne</strong>
+              <small>Semaine 8</small>
+            </button>
           </div>
-          <div>
-            <span>02</span>
-            <strong>Design</strong>
-            <small>Semaines 2-3</small>
-          </div>
-          <div>
-            <span>03</span>
-            <strong>Développement</strong>
-            <small>Semaines 4-6</small>
-          </div>
-          <div>
-            <span>04</span>
-            <strong>Tests</strong>
-            <small>Semaine 7</small>
-          </div>
-          <div>
-            <span>05</span>
-            <strong>Mise en ligne</strong>
-            <small>Semaine 8</small>
-          </div>
+          <article class="timeline-detail" aria-live="polite">
+            <div>
+              <p class="eyebrow" id="timeline-week">Semaine 1</p>
+              <h3 id="timeline-title">Cadrage stratégique</h3>
+              <p id="timeline-copy">
+                Réunion de lancement pour cadrer les objectifs, les profils
+                utilisateurs, les priorités de l'espace client et les documents
+                à gérer.
+              </p>
+            </div>
+            <ul id="timeline-list">
+              <li>Réunion de lancement avec la direction</li>
+              <li>Définition du périmètre et des parcours clés</li>
+              <li>Liste des contenus, documents et statuts à prévoir</li>
+            </ul>
+          </article>
         </div>
       </section>
 
