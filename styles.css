@@ -21,6 +21,7 @@
   --eb-blue-deep: #546f86;
   --page-x: clamp(22px, 5vw, 72px);
   --content-max: 1180px;
+  --proposal-max: 980px;
   --section-y: 88px;
 }
 
@@ -937,11 +938,12 @@ mark.blue {
 }
 
 .budget-grid {
+  align-items: stretch;
   display: grid;
-  gap: 18px;
-  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
-  margin: 38px auto 0;
-  max-width: 900px;
+  gap: 16px;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  margin: 42px auto 0;
+  max-width: var(--proposal-max);
 }
 
 .single-price-card {
@@ -951,8 +953,8 @@ mark.blue {
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
   color: var(--ink);
   margin: 0;
-  min-height: 292px;
-  padding: 34px;
+  min-height: 304px;
+  padding: 38px;
   position: relative;
   transition:
     border-color 180ms ease,
@@ -961,12 +963,16 @@ mark.blue {
 }
 
 .maintenance-card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  align-self: stretch;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 4px;
   color: white;
-  min-height: 292px;
-  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 304px;
+  padding: 26px;
   position: relative;
   transition:
     border-color 180ms ease,
@@ -977,11 +983,14 @@ mark.blue {
 .single-price-card p:not(.price) {
   color: var(--muted);
   line-height: 1.65;
+  max-width: 560px;
 }
 
 .maintenance-card p:not(.monthly-price) {
-  color: rgba(255, 255, 255, 0.78);
-  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 14px;
+  line-height: 1.55;
+  margin-bottom: 0;
 }
 
 .tag {
@@ -997,48 +1006,47 @@ mark.blue {
 }
 
 .tag.light {
-  background: rgba(255, 255, 255, 0.12);
-  color: white;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.76);
 }
 
 .price {
   color: var(--navy);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 52px;
+  font-size: clamp(58px, 6vw, 76px);
   line-height: 1;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .monthly-price {
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 48px;
+  font-size: 34px;
   line-height: 1;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .monthly-price small {
-  color: rgba(255, 255, 255, 0.68);
+  color: rgba(255, 255, 255, 0.54);
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-  font-size: 17px;
+  font-size: 14px;
   margin-left: 6px;
 }
 
 .budget-breakdown {
   display: grid;
-  gap: 1px;
+  gap: 12px;
   grid-template-columns: repeat(4, 1fr);
-  margin: 20px auto 0;
-  max-width: 900px;
-  overflow: hidden;
+  margin: 16px auto 0;
+  max-width: var(--proposal-max);
 }
 
 .budget-breakdown div {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.13);
   color: white;
-  min-height: 156px;
-  padding: 22px;
+  min-height: 168px;
+  padding: 24px 22px;
   transition:
     border-color 180ms ease,
     box-shadow 180ms ease,
@@ -1050,7 +1058,7 @@ mark.blue {
   display: block;
   font-size: 12px;
   font-weight: 780;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
 .budget-breakdown strong {
@@ -1067,7 +1075,7 @@ mark.blue {
 
 .budget-note {
   color: rgba(255, 255, 255, 0.76);
-  margin: 24px auto 0;
+  margin: 26px auto 0;
   max-width: 720px;
   text-align: center;
 }
@@ -1079,16 +1087,17 @@ mark.blue {
 }
 
 .timeline-shell {
-  margin: 54px auto 0;
+  margin: 58px auto 0;
   max-width: var(--content-max);
+  padding-top: 44px;
 }
 
 .quote-timeline {
   display: grid;
-  gap: 12px;
-  grid-template-columns: repeat(8, minmax(118px, 1fr));
+  gap: 10px;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
   margin: 0 auto;
-  min-width: 980px;
+  min-width: 920px;
   position: relative;
 }
 
@@ -1108,7 +1117,8 @@ mark.blue {
   border-radius: 4px;
   color: var(--navy);
   min-width: 0;
-  padding: 34px 18px 20px;
+  min-height: 118px;
+  padding: 34px 12px 18px;
   position: relative;
   text-align: center;
   transition:
@@ -1140,7 +1150,7 @@ mark.blue {
   justify-content: center;
   left: 50%;
   position: absolute;
-  top: -52px;
+  top: -50px;
   transform: translateX(-50%);
   width: 36px;
   z-index: 1;
@@ -1153,12 +1163,15 @@ mark.blue {
 
 .timeline-step strong {
   display: block;
-  font-size: 15px;
+  font-size: 14px;
+  line-height: 1.18;
   margin-bottom: 7px;
 }
 
 .timeline-step small {
   color: var(--muted);
+  display: block;
+  font-size: 12px;
 }
 
 .timeline-step.active small {
@@ -1174,8 +1187,8 @@ mark.blue {
   display: grid;
   gap: 34px;
   grid-template-columns: minmax(0, 0.95fr) minmax(260px, 1.05fr);
-  margin: 34px auto 0;
-  padding: 34px;
+  margin: 28px auto 0;
+  padding: 36px;
 }
 
 .timeline-detail h3 {
@@ -1243,10 +1256,23 @@ mark.blue {
   .service-strip,
   .client-workspace,
   .admin-stats,
-  .budget-grid,
-  .budget-breakdown,
   .timeline-detail {
     grid-template-columns: 1fr;
+  }
+
+  .budget-grid {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+  }
+
+  .budget-breakdown {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 720px;
+  }
+
+  .maintenance-card {
+    min-height: auto;
+    padding: 24px 26px;
   }
 
   .quote-timeline {
@@ -1327,6 +1353,31 @@ mark.blue {
 
   .progress-labels {
     font-size: 11px;
+  }
+
+  .single-price-card {
+    min-height: auto;
+    padding: 32px 24px;
+  }
+
+  .maintenance-card {
+    padding: 22px 24px;
+  }
+
+  .budget-breakdown {
+    grid-template-columns: 1fr;
+  }
+
+  .budget-breakdown div {
+    min-height: auto;
+  }
+
+  .timeline-shell {
+    margin-top: 48px;
+  }
+
+  .timeline-detail {
+    padding: 26px 22px;
   }
 }
 
