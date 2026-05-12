@@ -3,19 +3,42 @@ const panels = document.querySelectorAll(".prototype-frame");
 const revealItems = document.querySelectorAll(
   ".section-heading, .prototype-tabs, .prototype-frame, .single-price-card, .budget-note, .quote-timeline div"
 );
+let activePrototypeIndex = 0;
+let prototypeRotation;
+
+const activatePrototype = (target) => {
+  tabs.forEach((item) => {
+    item.classList.toggle("active", item.dataset.target === target);
+  });
+
+  panels.forEach((panel) => {
+    panel.classList.toggle("active", panel.dataset.panel === target);
+  });
+
+  activePrototypeIndex = [...tabs].findIndex((tab) => tab.dataset.target === target);
+};
+
+const startPrototypeRotation = () => {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || tabs.length < 2) {
+    return;
+  }
+
+  window.clearInterval(prototypeRotation);
+  prototypeRotation = window.setInterval(() => {
+    activePrototypeIndex = (activePrototypeIndex + 1) % tabs.length;
+    activatePrototype(tabs[activePrototypeIndex].dataset.target);
+  }, 5200);
+};
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
-    const target = tab.dataset.target;
-
-    tabs.forEach((item) => item.classList.remove("active"));
-    panels.forEach((panel) => {
-      panel.classList.toggle("active", panel.dataset.panel === target);
-    });
-
-    tab.classList.add("active");
+    activatePrototype(tab.dataset.target);
+    window.clearInterval(prototypeRotation);
+    window.setTimeout(startPrototypeRotation, 9000);
   });
 });
+
+startPrototypeRotation();
 
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
