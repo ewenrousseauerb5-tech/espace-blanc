@@ -1323,10 +1323,20 @@ mark.blue {
 
   .quote-timeline {
     gap: 12px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-columns: minmax(178px, 64vw);
+    grid-auto-flow: column;
+    grid-template-columns: none;
     max-width: 100%;
     min-width: 0;
-    overflow: hidden;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    padding: 2px 0 12px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .quote-timeline::-webkit-scrollbar {
+    display: none;
   }
 
   .quote-timeline::before {
@@ -1336,6 +1346,7 @@ mark.blue {
   .timeline-step {
     min-height: 108px;
     padding: 18px 14px;
+    scroll-snap-align: start;
     text-align: left;
   }
 
@@ -1453,7 +1464,7 @@ mark.blue {
   }
 
   .quote-timeline {
-    grid-template-columns: 1fr;
+    grid-auto-columns: minmax(176px, 78vw);
   }
 
   .timeline-detail {
