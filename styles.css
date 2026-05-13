@@ -31,6 +31,9 @@
 }
 
 html {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
   scroll-behavior: auto;
   width: 100%;
 }
@@ -44,12 +47,15 @@ body {
     sans-serif;
   max-width: 100%;
   overflow-x: hidden;
+  position: relative;
   width: 100%;
 }
 
 main {
   max-width: 100%;
   overflow-x: hidden;
+  position: relative;
+  width: 100%;
 }
 
 a {
@@ -378,7 +384,10 @@ h3 {
 }
 
 .section {
+  max-width: 100%;
+  overflow-x: hidden;
   padding: var(--section-y) var(--page-x);
+  width: 100%;
 }
 
 .section-heading {
@@ -1120,7 +1129,9 @@ mark.blue {
 .timeline-shell {
   margin: 58px auto 0;
   max-width: var(--content-max);
+  overflow-x: hidden;
   padding-top: 44px;
+  width: 100%;
 }
 
 .quote-timeline {
@@ -1128,8 +1139,10 @@ mark.blue {
   gap: 10px;
   grid-template-columns: repeat(8, minmax(0, 1fr));
   margin: 0 auto;
+  max-width: 100%;
   min-width: 920px;
   position: relative;
+  width: 100%;
 }
 
 .quote-timeline::before {
@@ -1335,17 +1348,22 @@ mark.blue {
   }
 
   .quote-timeline {
+    -webkit-overflow-scrolling: touch;
     gap: 12px;
     grid-auto-columns: minmax(178px, 64vw);
     grid-auto-flow: column;
     grid-template-columns: none;
+    margin-left: 0;
+    margin-right: 0;
     max-width: 100%;
     min-width: 0;
+    overscroll-behavior-x: contain;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     padding: 2px 0 12px;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
+    width: 100%;
   }
 
   .quote-timeline::-webkit-scrollbar {
