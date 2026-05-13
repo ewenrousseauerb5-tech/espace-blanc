@@ -1091,7 +1091,7 @@ mark.blue {
 .timeline-section {
   background: #f6f8fb;
   border-top: 1px solid var(--line);
-  overflow-x: auto;
+  overflow-x: clip;
 }
 
 .timeline-shell {
@@ -1242,7 +1242,9 @@ mark.blue {
   }
 
   .hero-logo {
+    align-self: center;
     height: 42px;
+    margin-bottom: clamp(42px, 7vh, 64px);
     width: 148px;
   }
 
@@ -1282,8 +1284,35 @@ mark.blue {
     padding: 24px 26px;
   }
 
+  .timeline-shell {
+    padding-top: 0;
+  }
+
   .quote-timeline {
+    gap: 12px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-width: 0;
     overflow: visible;
+  }
+
+  .quote-timeline::before {
+    display: none;
+  }
+
+  .timeline-step {
+    min-height: 108px;
+    padding: 18px 14px;
+    text-align: left;
+  }
+
+  .timeline-step span {
+    height: 30px;
+    left: auto;
+    margin-bottom: 14px;
+    position: static;
+    top: auto;
+    transform: none;
+    width: 30px;
   }
 
   .prototype-tabs {
@@ -1387,6 +1416,10 @@ mark.blue {
 
   .timeline-shell {
     margin-top: 48px;
+  }
+
+  .quote-timeline {
+    grid-template-columns: 1fr;
   }
 
   .timeline-detail {
