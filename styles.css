@@ -234,6 +234,17 @@ button:hover,
   text-align: left;
 }
 
+.client-pill {
+  border-left: 2px solid rgba(185, 154, 93, 0.72);
+  color: var(--navy-2);
+  font-size: 14px;
+  font-weight: 760;
+  letter-spacing: 0;
+  margin-bottom: 18px;
+  padding-left: 12px;
+  text-transform: uppercase;
+}
+
 .hero-visual {
   animation: heroFloat 9s ease-in-out infinite;
   height: min(48vh, 520px);
@@ -1300,6 +1311,12 @@ mark.blue {
     align-self: center;
     max-width: 640px;
     text-align: center;
+  }
+
+  .client-pill {
+    border-left: 0;
+    display: inline-block;
+    padding-left: 0;
   }
 
   .hero-copy {
