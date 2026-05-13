@@ -89,7 +89,7 @@ button:hover,
   }
 
   50% {
-    transform: translateY(-45%) translateX(-8px);
+    transform: translateY(-47%) translateX(-14px);
   }
 }
 
@@ -100,7 +100,7 @@ button:hover,
   }
 
   50% {
-    transform: translate3d(-10px, 12px, 0);
+    transform: translate3d(-16px, 18px, 0);
   }
 }
 
@@ -235,7 +235,7 @@ button:hover,
 }
 
 .hero-visual {
-  animation: heroFloat 9s ease-in-out infinite;
+  animation: heroFloat 5.8s ease-in-out infinite;
   height: min(48vh, 520px);
   pointer-events: none;
   position: absolute;
@@ -262,7 +262,7 @@ button:hover,
 }
 
 .visual-line {
-  animation: lineSweep 4.8s ease-in-out infinite;
+  animation: lineSweep 3.4s ease-in-out infinite;
   transform-origin: right center;
   background: rgba(30, 64, 101, 0.22);
   display: block;
@@ -281,7 +281,7 @@ button:hover,
 }
 
 .visual-card {
-  animation: softDrift 8s ease-in-out infinite;
+  animation: softDrift 5.2s ease-in-out infinite;
   background: rgba(255, 255, 255, 0.62);
   border: 1px solid rgba(255, 255, 255, 0.7);
   box-shadow: 0 20px 48px rgba(19, 43, 73, 0.12);
