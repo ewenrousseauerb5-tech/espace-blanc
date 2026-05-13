@@ -11,90 +11,90 @@ const revealItems = document.querySelectorAll(
 const timelineDetails = {
   1: {
     week: "Semaine 1",
-    title: "Cadrage stratégique",
+    title: "Premier échange",
     copy:
-      "Réunion de lancement pour cadrer les objectifs, les profils utilisateurs, les priorités de l'espace client et les documents à gérer.",
+      "On commence par une réunion simple pour comprendre les besoins, les priorités et les informations à afficher sur le site.",
     items: [
-      "Réunion de lancement avec la direction",
-      "Définition du périmètre et des parcours clés",
-      "Liste des contenus, documents et statuts à prévoir",
+      "Réunion de lancement",
+      "Liste des pages et services à présenter",
+      "Première liste des documents à prévoir",
     ],
   },
   2: {
     week: "Semaine 2",
-    title: "Architecture UX & contenus",
+    title: "Plan du site",
     copy:
-      "Organisation des pages, des accès privés et des contenus nécessaires pour rendre l'expérience claire dès le premier contact.",
+      "On organise les pages, les textes importants et les informations que les clients devront retrouver facilement.",
     items: [
-      "Arborescence du site vitrine et de l'espace privé",
-      "Structure des statuts client et des documents",
-      "Point de validation court en fin de semaine",
+      "Plan des pages principales",
+      "Organisation des contenus",
+      "Validation du plan avant de passer au design",
     ],
   },
   3: {
     week: "Semaine 3",
-    title: "Direction artistique premium",
+    title: "Design de la proposition",
     copy:
-      "Création d'une identité digitale plus professionnelle, tout en conservant une continuité avec l'univers doux et bleu d'Espace Blanc.",
+      "On crée une direction visuelle professionnelle, élégante et cohérente avec l'image actuelle d'Espace Blanc.",
     items: [
-      "Maquette de la page principale",
-      "Déclinaison des couleurs, typographies et composants",
-      "Réunion de présentation des choix visuels",
+      "Design de la page principale",
+      "Choix des couleurs et de la typographie",
+      "Présentation du style général",
     ],
   },
   4: {
     week: "Semaine 4",
-    title: "Prototype des écrans clés",
+    title: "Validation des écrans",
     copy:
-      "Construction d'un prototype navigable pour valider la vitrine, le tableau de bord client et l'interface d'administration.",
+      "On présente les écrans clés pour valider la direction avant de construire la version finale.",
     items: [
-      "Prototype site vitrine",
-      "Prototype espace client avec documents et statut",
-      "Prototype admin pour piloter les dossiers",
+      "Aperçu du site web",
+      "Aperçu de l'espace client",
+      "Aperçu de la partie administratrice",
     ],
   },
   5: {
     week: "Semaine 5",
-    title: "Développement de la vitrine",
+    title: "Création du site web",
     copy:
-      "Intégration responsive de la partie publique, avec une expérience fluide, premium et adaptée aux futurs contenus de la marque.",
+      "On construit la partie visible du site avec une présentation claire des services et une navigation fluide.",
     items: [
-      "Développement des sections principales",
-      "Animations sobres et transitions",
-      "Optimisation mobile et desktop",
+      "Création des sections principales",
+      "Adaptation ordinateur et mobile",
+      "Ajout des textes et visuels validés",
     ],
   },
   6: {
     week: "Semaine 6",
-    title: "Développement de l'espace privé",
+    title: "Création de l'espace client",
     copy:
-      "Mise en place de la logique client/admin pour centraliser les documents, les notes, les étapes et le suivi de chaque dossier.",
+      "On met en place l'espace où chaque client pourra suivre son dossier et retrouver ses documents.",
     items: [
-      "Espace client sécurisé",
-      "Module de documents et notes",
-      "Interface admin pour ajouter et suivre les dossiers",
+      "Page de suivi du dossier",
+      "Zone documents",
+      "Informations importantes pour le client",
     ],
   },
   7: {
     week: "Semaine 7",
-    title: "Tests, retours et ajustements",
+    title: "Corrections et ajustements",
     copy:
-      "Phase de vérification avec retours de la direction pour corriger, simplifier et finaliser l'expérience avant mise en ligne.",
+      "On relit, on teste et on ajuste les détails pour que tout soit clair avant la mise en ligne.",
     items: [
-      "Recette fonctionnelle complète",
-      "Corrections design et contenu",
-      "Validation finale avant publication",
+      "Vérification du site",
+      "Corrections des textes et détails visuels",
+      "Dernier point de validation",
     ],
   },
   8: {
     week: "Semaine 8",
-    title: "Mise en ligne & passation",
+    title: "Mise en ligne",
     copy:
-      "Publication de la première version, configuration finale et accompagnement pour permettre une prise en main sereine.",
+      "On publie la première version et on explique comment utiliser les parties principales.",
     items: [
-      "Mise en ligne de la plateforme",
-      "Mini formation d'utilisation",
-      "Démarrage de la maintenance mensuelle",
+      "Mise en ligne",
+      "Présentation du fonctionnement",
+      "Début de la maintenance mensuelle",
     ],
   },
 };
