@@ -322,28 +322,16 @@ button:hover,
   width: 44%;
 }
 
-.card-b {
-  --end-x: 18px;
-  --end-y: -18px;
-  --start-x: 0;
-  --start-y: 0;
-  animation-delay: -1.4s;
-  bottom: 18%;
-  right: 38%;
-  min-height: 116px;
-  width: 46%;
-}
-
 .card-c {
   --end-x: -18px;
   --end-y: -12px;
   --start-x: 0;
   --start-y: 0;
-  animation-delay: -2.2s;
-  min-height: 104px;
-  right: 5%;
-  top: 46%;
-  width: 36%;
+  animation-delay: -1.6s;
+  min-height: 116px;
+  right: 8%;
+  top: 44%;
+  width: 40%;
 }
 
 .card-d {
@@ -351,11 +339,11 @@ button:hover,
   --end-y: 16px;
   --start-x: 0;
   --start-y: 0;
-  animation-delay: -3s;
-  bottom: 38%;
+  animation-delay: -2.8s;
+  bottom: 22%;
   min-height: 96px;
-  right: 58%;
-  width: 34%;
+  right: 46%;
+  width: 38%;
 }
 
 .eyebrow {
