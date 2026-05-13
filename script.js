@@ -8,8 +8,6 @@ const timelineList = document.querySelector("#timeline-list");
 const revealItems = document.querySelectorAll(
   ".section-heading, .prototype-tabs, .prototype-frame, .single-price-card, .maintenance-card, .budget-breakdown, .budget-note, .quote-timeline, .timeline-detail"
 );
-let activePrototypeIndex = 0;
-let prototypeRotation;
 const timelineDetails = {
   1: {
     week: "Semaine 1",
@@ -109,31 +107,13 @@ const activatePrototype = (target) => {
   panels.forEach((panel) => {
     panel.classList.toggle("active", panel.dataset.panel === target);
   });
-
-  activePrototypeIndex = [...tabs].findIndex((tab) => tab.dataset.target === target);
-};
-
-const startPrototypeRotation = () => {
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || tabs.length < 2) {
-    return;
-  }
-
-  window.clearInterval(prototypeRotation);
-  prototypeRotation = window.setInterval(() => {
-    activePrototypeIndex = (activePrototypeIndex + 1) % tabs.length;
-    activatePrototype(tabs[activePrototypeIndex].dataset.target);
-  }, 5200);
 };
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
     activatePrototype(tab.dataset.target);
-    window.clearInterval(prototypeRotation);
-    window.setTimeout(startPrototypeRotation, 9000);
   });
 });
-
-startPrototypeRotation();
 
 const activateTimelineWeek = (week) => {
   const detail = timelineDetails[week];
