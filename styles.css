@@ -1271,6 +1271,7 @@ mark.blue {
   }
 
   .hero-content {
+    align-items: center;
     min-height: auto;
   }
 
@@ -1292,6 +1293,18 @@ mark.blue {
 
   .section-heading {
     display: block;
+    text-align: center;
+  }
+
+  .hero-text {
+    align-self: center;
+    max-width: 640px;
+    text-align: center;
+  }
+
+  .hero-copy {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .dashboard-grid,
@@ -1383,9 +1396,21 @@ mark.blue {
   }
 
   .mock-site nav {
+    align-items: center;
+    flex-direction: row;
     left: 22px;
     right: 22px;
     top: 22px;
+  }
+
+  .mock-brand {
+    left: auto;
+    position: static;
+    transform: none;
+  }
+
+  .mock-site nav div {
+    display: none;
   }
 
   .editorial-bottom {
@@ -1413,23 +1438,31 @@ mark.blue {
     grid-template-columns: 1fr;
   }
 
+  .doc-row,
+  .panel-title {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
 }
 
 @media (max-width: 560px) {
+  :root {
+    --page-x: 20px;
+  }
+
   h1 {
-    font-size: 58px;
+    font-size: 50px;
+    line-height: 0.98;
   }
 
   h2 {
-    font-size: 34px;
+    font-size: 32px;
   }
 
   .button {
     width: 100%;
-  }
-
-  .mock-site nav div {
-    flex-wrap: wrap;
   }
 
   .progress-labels {
@@ -1439,6 +1472,10 @@ mark.blue {
   .single-price-card {
     min-height: auto;
     padding: 32px 24px;
+  }
+
+  .price {
+    font-size: 58px;
   }
 
   .maintenance-card {
@@ -1471,6 +1508,45 @@ mark.blue {
     max-width: 100%;
     min-width: 0;
     padding: 26px 22px;
+  }
+
+  .mock-menu {
+    min-height: 32px;
+    padding: 0 12px;
+  }
+
+  .mock-brand {
+    font-size: 18px;
+  }
+
+  .mock-visual-hero h3 {
+    font-size: 42px;
+  }
+
+  .editorial-bottom {
+    gap: 18px;
+    padding: 34px 24px 28px;
+  }
+
+  .editorial-bottom h4 {
+    font-size: 27px;
+  }
+
+  .dashboard,
+  .admin-shell {
+    padding: 16px;
+  }
+
+  .progress-card,
+  .dashboard-grid article,
+  .document-panel,
+  .decision-panel,
+  .admin-stats article {
+    padding: 18px;
+  }
+
+  .dashboard-grid h4 {
+    min-height: 0;
   }
 }
 
