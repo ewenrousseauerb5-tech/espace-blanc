@@ -99,14 +99,14 @@ button:hover,
   }
 }
 
-@keyframes softDrift {
+@keyframes assemblePiece {
   0%,
   100% {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(var(--start-x), var(--start-y), 0);
   }
 
   50% {
-    transform: translate3d(-16px, 18px, 0);
+    transform: translate3d(var(--end-x), var(--end-y), 0);
   }
 }
 
@@ -287,27 +287,75 @@ button:hover,
 }
 
 .visual-card {
-  animation: softDrift 5.2s ease-in-out infinite;
-  background: rgba(255, 255, 255, 0.62);
+  animation: assemblePiece 4.8s ease-in-out infinite;
+  background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(255, 255, 255, 0.7);
   box-shadow: 0 20px 48px rgba(19, 43, 73, 0.12);
+  color: var(--navy);
   display: block;
+  padding: 18px;
   position: absolute;
 }
 
+.visual-card strong {
+  display: block;
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.visual-card small {
+  color: var(--muted);
+  display: block;
+  font-size: 11px;
+  line-height: 1.25;
+}
+
 .card-a {
-  height: 28%;
+  --end-x: -16px;
+  --end-y: 14px;
+  --start-x: 0;
+  --start-y: 0;
+  min-height: 126px;
   right: 20%;
   top: 18%;
-  width: 42%;
+  width: 44%;
 }
 
 .card-b {
-  animation-delay: -3s;
+  --end-x: 18px;
+  --end-y: -18px;
+  --start-x: 0;
+  --start-y: 0;
+  animation-delay: -1.4s;
   bottom: 18%;
-  height: 24%;
   right: 38%;
-  width: 44%;
+  min-height: 116px;
+  width: 46%;
+}
+
+.card-c {
+  --end-x: -18px;
+  --end-y: -12px;
+  --start-x: 0;
+  --start-y: 0;
+  animation-delay: -2.2s;
+  min-height: 104px;
+  right: 5%;
+  top: 46%;
+  width: 36%;
+}
+
+.card-d {
+  --end-x: 14px;
+  --end-y: 16px;
+  --start-x: 0;
+  --start-y: 0;
+  animation-delay: -3s;
+  bottom: 38%;
+  min-height: 96px;
+  right: 58%;
+  width: 34%;
 }
 
 .eyebrow {
