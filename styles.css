@@ -626,12 +626,16 @@ h3 {
 .decision-panel:hover,
 .admin-stats article:hover,
 .maintenance-card:hover,
-.budget-breakdown > div:hover,
 .single-price-card:hover,
 .timeline-step:hover {
   border-color: rgba(84, 111, 134, 0.34);
   box-shadow: 0 18px 42px rgba(19, 43, 73, 0.1);
   transform: translateY(-3px);
+}
+
+.budget-breakdown > div:hover {
+  border-color: rgba(255, 255, 255, 0.26);
+  opacity: 0.92;
 }
 
 .service-strip strong {
@@ -1035,34 +1039,35 @@ mark.blue {
 
 .budget-breakdown {
   display: grid;
-  gap: 10px;
+  gap: 0;
   grid-template-columns: 1fr;
-  margin: 16px auto 0;
+  margin: 22px auto 0;
   max-width: var(--proposal-max);
 }
 
 .budget-breakdown > div {
   align-items: center;
-  background: rgba(248, 251, 255, 0.96);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 4px;
-  color: var(--navy);
+  background: transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  color: white;
   display: grid;
   gap: 18px;
   grid-template-columns: minmax(0, 1fr) auto;
-  min-height: 78px;
-  padding: 18px 22px;
+  min-height: 72px;
+  padding: 17px 4px;
   transition:
     border-color 180ms ease,
-    box-shadow 180ms ease,
-    transform 180ms ease;
+    opacity 180ms ease;
+}
+
+.budget-breakdown > div:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .budget-breakdown span {
-  color: var(--navy);
+  color: rgba(255, 255, 255, 0.84);
   display: block;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 24px;
+  font-size: 15px;
   font-weight: 780;
   line-height: 1;
   min-width: 94px;
@@ -1077,7 +1082,7 @@ mark.blue {
 }
 
 .budget-breakdown small {
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.58);
   line-height: 1.45;
 }
 
